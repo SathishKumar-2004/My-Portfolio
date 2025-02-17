@@ -1,0 +1,118 @@
+#About {
+  /* height: calc(100vh - 5rem); */
+  width: 100vw;
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  padding: 5rem;
+  overflow: hidden;
+}
+
+.about-content {
+  max-width: 40rem;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #f0f, #0ff);
+  -webkit-background-clip: text; /* Cool blue title */
+  color:transparent;
+  margin-bottom: 1rem;
+}
+
+.about-intro {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f5f5f5; /* Soft white text */
+  margin-bottom: 1rem;
+}
+
+.about-intro span,
+.about-text span {
+  background:linear-gradient(45deg, #f0f, #0ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  color: #fff; 
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.about-highlight {
+  font-size: 1.4rem;
+  font-weight: bold;
+  background: rgb(2,0,36);
+  background: linear-gradient(45deg, #f0f, #0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Cyan highlight */
+  margin-top: 1rem;
+}
+
+.about-image{
+   align-self:baseline; 
+   /* width: 25rem;
+   height: 25rem; */
+}
+
+.coder-image{
+  width: 25rem;
+  height: 18rem;
+  margin-top: 5.5rem;
+  border-radius: 2rem;
+  border: 1px solid white;
+  object-fit:contain;
+}
+@media screen and (max-width: 1200px){
+  #About{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image{
+    display: none;
+  }
+
+  }
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 700px) {
+  #About {
+    flex-direction: column;
+    padding: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-intro {
+    font-size: 1.2rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-highlight {
+    font-size: 1.2rem;
+  }
+}
