@@ -61,17 +61,17 @@ const Project = () => {
 
   return (
     <section id="projects">
-      <h2 className="section-title">Projects</h2>
+      <h2 className="section-title ">Projects</h2>
       <div className="project-container">
         {projects.map((project) => (
           <div
-            className={`project-card ${
+            className={`project-card  ${
               flippedCards[project.id] ? "flipped" : ""
             }`}
             key={project.id}
             onClick={() => handleFlip(project.id)}
           >
-            <div className="card-inner">
+            <div className="card-inner ">
               {/* Front Side */}
               <div className="card-front">
                 <img
