@@ -13,10 +13,12 @@
   animation: fadeIn 1.2s ease-in-out;
 }
 
+
+
 .about-title {
   font-size: 2.5rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #f0f, #0ff);
+  background: linear-gradient(180deg, #f0f, #0ff);
   -webkit-background-clip: text; /* Cool blue title */
   color:transparent;
   margin-bottom: 1rem;

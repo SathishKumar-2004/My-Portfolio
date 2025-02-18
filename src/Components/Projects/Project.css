@@ -14,7 +14,9 @@
 .section-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #00aaff;
+  background: linear-gradient(180deg, #f0f, #0ff);
+  -webkit-background-clip: text; /* Cool blue title */
+  color:transparent;
   margin-bottom: 2rem;
 }
 
@@ -27,11 +29,47 @@
 
 .project-card {
   background: #1e1e1e;
+  height:20rem;
   border-radius: 10px;
-  overflow: hidden;
+  overflow:hidden;
   transition: transform 0.3s ease-in-out;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-back {
+  background: #222;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.project-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+
 
 .project-card:hover {
   transform: translateY(-8px);
@@ -43,33 +81,23 @@
   object-fit: cover;
 }
 
-.project-info {
-  padding: 1rem;
+
+.project-title  {
+  font-size: 1.3rem;
+  color: #f5f5f5;
   text-align: center;
 }
 
-.project-info h3 {
-  font-size: 1.5rem;
-  color: #f5f5f5;
-  margin-bottom: 0.5rem;
-}
-
-.project-links {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 0.5rem;
-}
-
-.project-links a {
-  text-decoration: none;
-  color: #00aaff;
+.project-description {
   font-size: 1rem;
-  font-weight: bold;
-  transition: color 0.3s;
+  padding: 10px;
+  text-align: left;
 }
 
-.project-links a:hover {
-  color: #00aaff;
+.glow{
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+  -webkit-background-clip: text; /*Cool blue title*/
+  color:transparent;
 }
 
 /* Responsive */
@@ -78,8 +106,25 @@
     grid-template-columns: 1fr;
   }
 
-  .project-card {
-    max-width: 90%;
-    margin: 0 auto;
+ 
+}
+
+@media screen and (min-width:376px) and (max-width:415px){
+  .project-description  {
+    font-size: 0.8rem;
+  }
+  
+}
+@media screen and (max-width: 375px) {
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+  .btn{
+    width: 5rem;
+  }
+
+  .project-description  {
+    font-size: 0.6rem;
   }
 }
