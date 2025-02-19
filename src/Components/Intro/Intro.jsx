@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Intro = () => {
   return (
-    <section id="Intro">
+    <section id="Intro" className="h-">
       <div className="introContent">
         <span className="hello">Hello,</span>
         <span className="introText">
