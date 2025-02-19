@@ -41,10 +41,10 @@ const Contact = () => {
     setError("");
     emailjs
       .sendForm(
-        "service_nrybqsq",
-        "template_aoqi2gj",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "jzdBR6DnSnZ-22daq"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -94,7 +94,7 @@ const Contact = () => {
             <a
               href="https://github.com/SathishKumar-2004"
               target="_blank"
-              className="hover:text-gray-900 transform hover:scale-110 transition-all duration-200"
+              className="hover:text-gray-600 transform hover:scale-110 transition-all duration-200"
             >
               <FaGithub />
             </a>
@@ -145,7 +145,7 @@ const Contact = () => {
             <ToastContainer />
             <button
               type="submit"
-              className="w-full bg-blue-500 py-3 rounded text-white hover:bg-blue-600 transition"
+              className="w-full cursor-pointer bg-blue-500 py-3 rounded text-white hover:bg-blue-600 transition"
             >
               Send Message
             </button>

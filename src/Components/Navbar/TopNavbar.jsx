@@ -39,7 +39,7 @@ const TopNavbar = () => {
 
   return (
     <div className="navbar bg-gray-900">
-      <img src={logo} alt="logo" className="logo hidden md:block" />
+      <img src={logo} alt="logo" className="logo hidden  md:block  w-56" />
 
       {/* Hamburger Icon */}
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
@@ -65,7 +65,7 @@ const TopNavbar = () => {
             className="menuListItem"
             to="About"
             smooth={true}
-            offset={-150}
+            offset={-130}
             onClick={() => setIsOpen(false)}
           >
             About

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Intro.css";
 import profile from "../../assets/Sathish_kumar_professional_1-removebg-preview.png";
+import resume from "../../assets/Sathish_Resume.pdf";
 import { Link } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
 
@@ -17,9 +18,11 @@ const Intro = () => {
           className="animated-text"
           sequence={[
             "Software Engineer",
-            1000, // Shows for 2s
+            1000,
             "Full Stack Developer",
-            1000, // Shows for 2s
+            1000,
+            "Problem Solver",
+            1000,
           ]}
           wrapper="span"
           speed={50} // Typing speed
@@ -32,14 +35,18 @@ const Intro = () => {
           <br></br>
           Turning ideas into impactful digital experiences!
         </p>
-        <Link>
-          <button
+        {/* <Link> */}
+        <div>
+          <a
             type="button"
+            href={resume}
+            download="Sathish_Resume.pdf"
             className="py-2.5 px-5 me-2 mb-2 text-md font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 "
           >
             Download Resume
-          </button>
-        </Link>
+          </a>
+        </div>
+        {/* </Link> */}
       </div>
       <div>
         <img src={profile} alt="profile" className="profileImg " />
