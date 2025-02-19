@@ -50,4 +50,4 @@ VITE_EMAILJS_PUBLIC_KEY="your_public_key"
 
 ## Screenshots
 
-![Portfolio Homepage](public\Portfolio_homepage.png)
+![Portfolio Homepage](public/Portfolio_homepage.png)
