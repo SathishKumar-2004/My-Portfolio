@@ -48,7 +48,7 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          toast.success("Form Submitted Successfully!", {
+          toast.success("Message Sent Successfully!", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
