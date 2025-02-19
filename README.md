@@ -17,7 +17,7 @@ This is my personal portfolio website built using React and Vite. It showcases m
 
 - React.js (Frontend)
 - Vite (Build tool)
-- Tailwind CSS / Bootstrap (Styling)
+- Tailwind CSS (Styling)
 - EmailJS (Contact form)
 - Netlify (Deployment)
 
@@ -25,11 +25,11 @@ This is my personal portfolio website built using React and Vite. It showcases m
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/yourusername/yourportfolio.git
+   git clone https://github.com/SathishKumar-2004/My-Portfolio.git
    ```
 2. Navigate to the project folder
    ```sh
-   cd yourportfolio
+   cd My-Portfolio
    ```
 3. Install dependencies
    ```sh
