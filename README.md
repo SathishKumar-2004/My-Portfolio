@@ -17,7 +17,7 @@ This is my personal portfolio website built using React and Vite. It showcases m
 
 - React.js (Frontend)
 - Vite (Build tool)
-- Tailwind CSS / Bootstrap (Styling)
+- Tailwind CSS (Styling)
 - EmailJS (Contact form)
 - Netlify (Deployment)
 
@@ -25,11 +25,11 @@ This is my personal portfolio website built using React and Vite. It showcases m
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/yourusername/yourportfolio.git
+   git clone https://github.com/SathishKumar-2004/My-Portfolio.git
    ```
 2. Navigate to the project folder
    ```sh
-   cd yourportfolio
+   cd My-Portfolio
    ```
 3. Install dependencies
    ```sh
@@ -44,10 +44,10 @@ This is my personal portfolio website built using React and Vite. It showcases m
 
 Create a `.env` file in the root directory and add the following:
 
-VITE_EMAILJS_SERVICE_ID="your_service_id"
-VITE_EMAILJS_TEMPLATE_ID="your_template_id"
-VITE_EMAILJS_PUBLIC_KEY="your_public_key"
+VITE_EMAILJS_SERVICE_ID="your_service_id" <br/>
+VITE_EMAILJS_TEMPLATE_ID="your_template_id" <br/>
+VITE_EMAILJS_PUBLIC_KEY="your_public_key" 
 
 ## Screenshots
 
-![Portfolio Homepage](public\Portfolio_homepage.png)
+![Portfolio Homepage](public/Portfolio_homepage.png)
