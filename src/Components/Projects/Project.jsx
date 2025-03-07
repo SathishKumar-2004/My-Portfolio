@@ -68,7 +68,7 @@ const Project = () => {
         className="project-container"
         initial={{ opacity: 0, y: 50 }} // Start position (hidden and below)
         whileInView={{ opacity: 1, y: 0 }} // End position (visible)
-        transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
+        transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
         viewport={{ once: true, amount: 0.3 }} // Triggers when 30% is in view
       >
         {projects.map((project) => (
