@@ -10,10 +10,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 import "./Contact.css";
-
-// toast.configure();
 
 const Contact = () => {
   const form = useRef();
@@ -72,7 +71,13 @@ const Contact = () => {
       <h2 className="font-bold text-white mb-20 text-center section-title-contact ">
         Contact
       </h2>
-      <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between max-w-6xl">
+      <motion.div
+        className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between max-w-6xl"
+        initial={{ opacity: 0, y: 50 }} // Start position (hidden and below)
+        whileInView={{ opacity: 1, y: 0 }} // End position (visible)
+        transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
+        viewport={{ once: true, amount: 0.3 }} // Triggers when 30% is in view
+      >
         {/* Left Side: Contact Info with Image/GIF */}
         <div className="w-full md:w-1/2 text-center md:text-left mb-10 md:mb-0">
           <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
@@ -151,7 +156,7 @@ const Contact = () => {
             </button>
           </form>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

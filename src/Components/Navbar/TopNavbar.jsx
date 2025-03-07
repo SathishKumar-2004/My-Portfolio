@@ -72,6 +72,15 @@ const TopNavbar = () => {
           </Link>
           <Link
             className="menuListItem"
+            to="experience"
+            smooth={true}
+            offset={-50}
+            onClick={() => setIsOpen(false)}
+          >
+            My Work
+          </Link>
+          <Link
+            className="menuListItem"
             to="projects"
             smooth={true}
             offset={-20}
@@ -117,6 +126,15 @@ const TopNavbar = () => {
           offset={-80}
         >
           About
+          <span className="absolute left-0 bottom-[-0.5rem] w-0 h-[2px] bg-gradient-to-r from-fuchsia-500 to-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+        </Link>
+        <Link
+          className="menuListItem font-bold hover: bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent relative group"
+          to="experience"
+          smooth={true}
+          offset={-50}
+        >
+          My Work
           <span className="absolute left-0 bottom-[-0.5rem] w-0 h-[2px] bg-gradient-to-r from-fuchsia-500 to-cyan-400 transition-all duration-300 group-hover:w-full"></span>
         </Link>
         <Link

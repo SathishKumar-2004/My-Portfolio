@@ -1,0 +1,14 @@
+.section-title-work{
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(180deg, #f0f, #0ff);
+  -webkit-background-clip: text; /* Cool blue title */
+  color:transparent;
+}
+
+.timeline{
+  background: linear-gradient(90deg, #f0f, #0ff);
+  /* -webkit-background-clip: text; Cool blue title */
+  /* color:transparent; */
+}
+

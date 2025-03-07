@@ -2,13 +2,19 @@ import React from "react";
 import "./Intro.css";
 import profile from "../../assets/Sathish_kumar_professional_1-removebg-preview.png";
 import resume from "../../assets/Sathish_Resume.pdf";
-import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
 const Intro = () => {
   return (
-    <section id="Intro" className="h-">
-      <div className="introContent">
+    <section id="Intro" className="">
+      <motion.div
+        className="introContent"
+        // initial={{ opacity: 0, y: 50 }}
+        // whileInView={{ opacity: 1, y: 0 }}
+        // transition={{ duration: 0.8, ease: "easeOut" }}
+        // viewport={{ once: true, amount: 1 }} // Ensures it triggers fully only once
+      >
         <span className="hello">Hello,</span>
         <span className="introText">
           I'm <span className="name ">Sathish Kumar</span>
@@ -47,7 +53,7 @@ const Intro = () => {
           </a>
         </div>
         {/* </Link> */}
-      </div>
+      </motion.div>
       <div>
         <img src={profile} alt="profile" className="profileImg " />
       </div>

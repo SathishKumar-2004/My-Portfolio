@@ -1,11 +1,18 @@
 import React from "react";
 import "./About.css";
 import codingImg from "../../assets/coding-image-1.jpg";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="About" className="about-container">
-      <div className="about-content">
+    <section id="About" className="about-container ">
+      <motion.div
+        className="about-content"
+        initial={{ opacity: 0, y: 50 }} // Start position (hidden and below)
+        whileInView={{ opacity: 1, y: 0 }} // End position (visible)
+        transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
+        viewport={{ once: true, amount: 0.3 }} // Triggers when 30% is in view
+      >
         <h2 className="about-title">About Me</h2>
         <p className="about-intro">
           Hey there! 👋 I'm <span>Sathish Kumar</span> , a{" "}
@@ -23,13 +30,20 @@ const About = () => {
           how they can transform industries. I’m always up for learning new
           technologies and collaborating on exciting projects.
         </p>
-        <p className="about-highlight">
+        <p className="about-highlight inline-block">
           Let’s build something awesome together!
-        </p>
-      </div>
-      <div className="about-image">
+        </p>{" "}
+        <span className="text-3xl">🎯</span>
+      </motion.div>
+      <motion.div
+        className="about-image"
+        initial={{ opacity: 0, y: 50 }} // Start position (hidden and below)
+        whileInView={{ opacity: 1, y: 0 }} // End position (visible)
+        transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
+        viewport={{ once: true, amount: 0.3 }} // Triggers when 30% is in view
+      >
         <img src={codingImg} alt="Coder Image" className="coder-image" />
-      </div>
+      </motion.div>
     </section>
   );
 };

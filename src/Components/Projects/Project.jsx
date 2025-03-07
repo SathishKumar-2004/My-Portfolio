@@ -5,6 +5,8 @@ import image2 from "../../assets/image2.png";
 import image3 from "../../assets/image3.png";
 import image4 from "../../assets/image4.png";
 
+import { motion } from "framer-motion";
+
 const projects = [
   {
     id: 1,
@@ -62,7 +64,13 @@ const Project = () => {
   return (
     <section id="projects">
       <h2 className="section-title ">Projects</h2>
-      <div className="project-container">
+      <motion.div
+        className="project-container"
+        initial={{ opacity: 0, y: 50 }} // Start position (hidden and below)
+        whileInView={{ opacity: 1, y: 0 }} // End position (visible)
+        transition={{ duration: 1, ease: "easeOut" }} // Smooth transition
+        viewport={{ once: true, amount: 0.3 }} // Triggers when 30% is in view
+      >
         {projects.map((project) => (
           <div
             className={`project-card  ${
@@ -128,7 +136,7 @@ const Project = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

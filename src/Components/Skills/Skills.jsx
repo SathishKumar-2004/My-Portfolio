@@ -1,6 +1,8 @@
 import React from "react";
 import "./Skills.css";
 
+import { motion } from "framer-motion";
+
 const skills = [
   {
     category: "Frontend",
@@ -113,7 +115,13 @@ const Skills = () => {
         </h2>
         <div className="space-y-8">
           {skills.map((skill, index) => (
-            <div key={index}>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }} // Start position (hidden and below)
+              whileInView={{ opacity: 1, y: 0 }} // End position (visible)
+              transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
+              viewport={{ once: true, amount: 0.3 }} // Triggers when 30% is in view
+            >
               <h3 className="text-xl font-semibold text-gray-300 mb-4">
                 {skill.category}
               </h3>
@@ -132,7 +140,7 @@ const Skills = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
