@@ -45,7 +45,7 @@ const Intro = () => {
         <div>
           <a
             type="button"
-            href={resume}
+            href="https://drive.google.com/file/d/19W6XLtcpaR2VpjzH17DSmdT9heC8I-zf/view?usp=drive_link"
             download="Sathish_Resume.pdf"
             className="py-2.5 px-5 me-2 mb-2 text-md font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 "
           >

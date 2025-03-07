@@ -87,7 +87,7 @@
     /* height: calc(100vh - 5vh); */
     flex-direction: column;
     text-align: center;
-    height: calc(100vh-5rem);
+    height: 80%;
     
   }
 
